@@ -5,7 +5,6 @@ import paho.mqtt.client as mqtt
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
-import geopy.distance
 
 # MPU Gyroscope Data (Simulated for this example)
 gyro_data = [0.0, 0.0, 0.0]

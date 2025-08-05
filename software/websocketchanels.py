@@ -7,7 +7,7 @@ import json
 async def send_messages():
     while True:
         try:
-            async with websockets.connect("ws://192.168.1.39:8000") as websocket:
+            async with websockets.connect("ws://10.9.0.204:8000") as websocket:
                 print("Connected to WebSocket server")
                 last_press_time = 0
                 delay = 0.2  # Delay in seconds between key press events
@@ -46,7 +46,7 @@ async def send_messages():
         except Exception as e:
             print(f"Error: {e}")
             print("Attempting to reconnect...")
-            await asyncio.sleep(5)  # Wait for 5 seconds before attempting to reconnect
+            await asyncio.sleep(3)  # Wait for 5 seconds before attempting to reconnect
 
 def start_websocket_client():
     asyncio.run(send_messages())
